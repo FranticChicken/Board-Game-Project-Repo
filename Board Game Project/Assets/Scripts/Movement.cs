@@ -122,17 +122,17 @@ public class PlayerMovement : MonoBehaviour
 
             /*Player Color Setting*/
 
-            if (_currentPlayer == 0 ){ //Color red when its player 1's turn
-                _text.color = Color.red; 
+            if (_currentPlayer == 0 ){ //Color green when its player 1's turn
+                _text.color = Color.green; 
             }
             else if(_currentPlayer == 1 ){ //Color grey when its player 2's turn
                 _text.color = Color.grey; 
             } 
-            else if(_currentPlayer == 2 ){ //Color blue when its player 3's turn
-                _text.color = Color.blue; 
+            else if(_currentPlayer == 2 ){ //Color red when its player 3's turn
+                _text.color = Color.red; 
             }
-            else if(_currentPlayer == 3 ){ //Color green when its player 4's turn
-                _text.color = Color.green; 
+            else if(_currentPlayer == 3 ){ //Color yellow when its player 4's turn
+                _text.color = Color.yellow; 
             }
 
             /*Player Single Tile Movement*/
