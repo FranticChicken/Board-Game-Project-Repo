@@ -74,11 +74,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if you want to restart the game at any point, click escape
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene("BoardGame");
-        }
+      
 
         CheckWin(); //Runs the method CheckWin(); to see if the user has reached tile 40. 
 
