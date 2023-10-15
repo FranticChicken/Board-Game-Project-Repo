@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
 
-    bool pauseMenuActive;
+    public bool pauseMenuActive;
+    
 
     
     
@@ -21,7 +22,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuBackground.gameObject.SetActive(false);
         
         pauseMenuActive = false;
-        Time.timeScale = 1f;
+        
     }
 
     public void OnQuitButtonClick()
@@ -29,6 +30,7 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+  
     
 
 
@@ -56,13 +58,13 @@ public class PauseMenu : MonoBehaviour
                 Debug.Log("pause menu is here!");
                 pauseMenuBackground.gameObject.SetActive(true);
                 pauseMenuActive = true;
-                Time.timeScale = 0f;
+                
             }
             else if(pauseMenuActive == true)
             {
                 pauseMenuBackground.gameObject.SetActive(false);
                 pauseMenuActive = false;
-                Time.timeScale = 1f;
+                
             }
         }
         

@@ -1599,6 +1599,7 @@ MonoBehaviour:
   _board: {fileID: 1129684322}
   _text: {fileID: 1112119215}
   _popUpText: {fileID: 1652734391}
+  _popUpTextBackgroundImage: {fileID: 1749661408}
 --- !u!212 &1129684324
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2051,7 +2052,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1652734390
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2130,7 +2131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1749661407
 RectTransform:
   m_ObjectHideFlags: 0
