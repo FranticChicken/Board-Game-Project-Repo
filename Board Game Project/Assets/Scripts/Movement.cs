@@ -132,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (_tileMovementAmount == 0 && !_isMoving && _nextPlayerTurn == true)
                 { //When the dice is not rolled yet, and we are not moving it will run this statement. 
-                    _text.text = $" Player {_currentPlayer + 1}'s Turn! Press 'Space' to roll the dice"; //Text to the players guiding keys to press to move. 
+                    _text.text = $" Player {_currentPlayer + 1}'s turn! Press 'Space' to roll the dice."; //Text to the players guiding keys to press to move. 
 
                     if (_turnStarted)
                     { //Will check for turn bool and set it to false during this statement. As nothing is being moved. 
@@ -163,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space) && _tileMovementAmount == 0 && _moveOn == true)
                 { //If the spacekey is pressed and the tilemovementamount is set to 0 (Which it should be since there is no initial die value), it will roll the dice. 
                     _tileMovementAmount = _die.RollDice(); //Dice will be rolled from the die script and is set tothe tilemovement variable 
-                    _text.text = "You rolled a " + _tileMovementAmount.ToString(); //Text to show what the user rolled converted ToString(); since its in text form. 
+                    _text.text = "You rolled a " + _tileMovementAmount.ToString() + "."; //Text to show what the user rolled converted ToString(); since its in text form. 
                     _turnStarted = true; //When we are rolling the dice, we dont want other actions to be done, unless stated. So the turn has started 
 
                 }
@@ -329,7 +329,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Event Six!");
         _popUpText.gameObject.SetActive(true);
         _popUpTextBackgroundImage.gameObject.SetActive(true);
-        _popUpText.text = "It's time for you to touch grass again. Move forward 2 spaces.";
+        _popUpText.text = "It's time for you to touch grass again. Move forward 2 spaces. Press 'Space' to continue.";
         EventMove();
     }
 
