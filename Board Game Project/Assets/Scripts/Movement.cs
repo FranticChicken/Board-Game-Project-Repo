@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     //roll to start variables
     bool _isStarted;
     int _diceAmount;
+    bool nextThing;
 
     
 
@@ -97,23 +98,40 @@ public class PlayerMovement : MonoBehaviour
                 _text.color = Color.white;
                 _text.text = "Press 'Space' to Roll the Dice. You must get a 1 to start the game.";
 
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) && nextThing != true)
                 {
+                    _popUpText.gameObject.SetActive(true);
+                    _popUpTextBackgroundImage.gameObject.SetActive(true);
                     _diceAmount = _die.RollDice();
                     Debug.Log("JJD");
                     if (_diceAmount == 1)
                     {
-                        //_text.text = "You rolled a one!";
-                        //set the flag to tru to start the game
-                        _isStarted = true;
-                        //i++;
+                    //_text.text = "You rolled a one!";
+                    //set the flag to tru to start the game
+                        nextThing = true;
+                    //i++;
+                        _popUpText.text = "You rolled a one! Press 'C' to begin.";
                         
+                       
                     }
                     else
                     {
-                        //_text.text = "You didn't roll a one. Please try again.";
+                        _popUpText.text = "You rolled a " + _diceAmount.ToString() + ". Please try again.";
+                        
                     }
+                    
+
                 }
+                if (nextThing == true && Input.GetKeyDown(KeyCode.C))
+                {
+                    _isStarted = true;
+                    _popUpText.gameObject.SetActive(false);
+                    _popUpTextBackgroundImage.gameObject.SetActive(false);
+    
+
+                }
+
+
 
             }
             else if (_isStarted)
