@@ -103,18 +103,15 @@ public class PlayerMovement : MonoBehaviour
                     Debug.Log("JJD");
                     if (_diceAmount == 1)
                     {
-                        _text.text = "You rolled a one!";
+                        //_text.text = "You rolled a one!";
                         //set the flag to tru to start the game
                         _isStarted = true;
                         //i++;
-                        MoveOneTile();
-                        MoveOneTile();
-                        MoveOneTile();
-                        _isMoving = false;
+                        
                     }
                     else
                     {
-                        _text.text = "You didn't roll a one. Please try again.";
+                        //_text.text = "You didn't roll a one. Please try again.";
                     }
                 }
 
